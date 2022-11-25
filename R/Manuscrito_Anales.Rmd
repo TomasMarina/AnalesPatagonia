@@ -1,5 +1,5 @@
 ---
-title: "¿Cuáles son los efectos de los cambios ambientales antropogénicos en las interacciones tróficas de las comunidades de los ecosistemas marinos en el gradiente latitudinal Atlántico Sudoccidental - Antártida?"
+title: "Una revisión de los efectos de los cambios ambientales antropogénicos en las interacciones tróficas de los ecosistemas marinos en el gradiente latitudinal Atlántico Sudoccidental - Antártida: una aproximación mediante redes ecológicas"
 author: "Tomás I. Marina & Leonardo A. Saravia"
 output: word_document
 bibliography: "MS_Anales.bib"
@@ -14,7 +14,29 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 
 ## INTRODUCCIÓN
 
-@Belgrano2005
+Las redes ecológicas están compuestas por un conjunto de especies y/o grupos funcionales y conexiones que representan las interacciones y los flujos de energía y/o materia en un sistema. Particularmente, una red ecológica describe las interacciones entre especies en una comunidad y hábitat determinados. En los ecosistemas ocurren interacciones de diferentes tipos: tróficas (de alimentación), mutualistas (de provisión de alimento y refugio), competitivas (de interferencia en la utilización de los recursos comunes), entre otras. Esta aproximación al estudio de las comunidades como una red de múltiples interacciones es una herramienta de análisis que ayuda a revelar no sólo la estructura y estabilidad sino las propiedades dinámicas y energéticas de un ecosistema [@Belgrano2005]. Los modelos tróficos de redes complejas pueden ser útiles para evitar el reduccionismo de analizar solo las especies que se suponen importantes y/o con las interacciones de mayor flujo relativo, lo que trae como consecuencia una descripción sesgada e incompleta del sistema en estudio. Al incorporar la mayor parte de las interacciones es posible capturar fenómenos emergentes imposibles de predecir cuando se utilizan modelos de pocas especies [@Hagstrom2017]. Esto proporciona una perspectiva de sistemas complejos para investigar los fenómenos ecológicos y para analizar los efectos del cambio climático global y las perturbaciones antropogénicas en los ecosistemas marinos [@Pascual2005].
+
+El estudio de la complejidad, estructura y estabilidad de las redes tróficas utilizando la teoría de redes comenzó en la década de 1970 con el análisis de comunidades terrestres y dulceacuícolas [@May1973; @Cohen1978; @Pimm1980; @Briand1987]. Durante esta época, el físico australiano Robert M. May sugirió, de manera teórica, que existía una relación entre complejidad, analizada mediante la conectividad (C = L/S^2 donde L es el número de interacciones y S es el número de especies), y estabilidad en redes tróficas: a mayor complejidad, menor estabilidad [@May1973]. Con el advenimiento de redes tróficas empíricas de mayor resolución, es decir mayor representación de especies biológicas que de grupos funcionales agregados y, por ende, complejidad, la hipótesis sobre la relación entre complejidad y estabilidad comenzó a ser objeto de debate [@Martinez1993; @Hall1997; @Jacquet2016]. Actualmente, los estudios de redes tróficas se centran en el análisis de la estructura y su influencia en el funcionamiento y estabilidad de los ecosistemas [e.g. @Stouffer2011; @Marina2018; @Marina2018a; @Landi2018]. En este sentido, existe evidencia de correlación entre ciertas propiedades estructurales y la respuesta de las redes tróficas a cambios de diverso origen afectando, en última instancia, la estabilidad de la red [@Stouffer2011; @Johnson2014; @Borrelli2015].
+
+Uno de los cambios ambientales más importantes en los ecosistemas marinos de altas latitudes es el aumento de la temperatura superficial media del agua [@Bulgin2020; @Gutt2021], registrándose incrementos de hasta 1ºC en los últimos 50 años [@Meredith2005]. Uno de los principales efectos directos sobre las especies marinas es el cumanto de la demanda metabólica [@Brown2004] y el cambio de distribución de las especies, que trae como consecuencia extinciones y/o invasiones locales particularmente en los ecosistemas de aguas templado-frías [e.g. @Kortsch2015; @McCarthy2019]. Por otro lado, uno de los cambios antropogénicos históricamente determinantes para la estructura y funcionamiento de los ecosistemas marinos ha sido y es la actividad pesquera [@Halpern2007]. Además del efecto directo sobre la biomasa de la especie objetivo de la pesca, se ha evidenciado que las pesquerías alteran la dieta y preferencia de los depredadores mediante la captura incidental y/o el descarte [@Funes2019].
+
+## CAMBIOS AMBIENTALES ANTROPOGÉNICOS EN EL ATLÁNTICO SUDOCCIDENTAL Y LA PENÍNSULA ANTÁRTICA
+
+Los efectos de los cambios ambientales antropogénicos en los ecosistemas del Atlántico Sudoccidental, particularmente del Mar Argentino, y la Península Antártica han sido estudiados principalmente con foco en una única especie o en un grupo reducido de especies de interés [e.g. @Dans2021; @Almandoz2019; @Fioramonti2022; @Sahade2015]. A continuación se describe el estado de conocimiento de los efectos de los cambios ambientales antropogénicos en diferentes ecosistemas marinos que en su conjunto comprenden un gradiente latitudinal en el rango 45º S - 62º S (Fig. 1).
+
+### SITUACIÓN EN EL GOLFO SAN JORGE
+
+### SITUACIÓN EN EL AMP NAMUNCURÁ - BANCO BURDWOOD
+
+### SITUACIÓN EN EL CANAL BEAGLE
+
+### SITUACIÓN EN CALETA POTTER (ANTÁRTIDA)
+
+
+## ¿CUÁL HA SIDO EL APORTE DESDE LA APROXIMACIÓN DE REDES ECOLÓGICAS?
+
+## PERSPECTIVAS A FUTURO
+
 
 ## AGRADECIMIENTOS
 
