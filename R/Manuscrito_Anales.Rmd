@@ -1,0 +1,21 @@
+---
+title: "¿Cuáles son los efectos de los cambios ambientales antropogénicos en las interacciones tróficas de las comunidades de los ecosistemas marinos en el gradiente latitudinal Atlántico Sudoccidental - Antártida?"
+author: "Tomás I. Marina & Leonardo A. Saravia"
+output: word_document
+bibliography: "MS_Anales.bib"
+---
+
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
+
+
+## RESUMEN
+
+## INTRODUCCIÓN
+
+@Belgrano2005
+
+## AGRADECIMIENTOS
+
+## LITERATURA CITADA
