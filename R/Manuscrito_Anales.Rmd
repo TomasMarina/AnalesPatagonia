@@ -37,7 +37,7 @@ world <- ne_countries(scale = "medium", returnclass = "sf")
 ggplot(data = world) +
   geom_sf() +
   coord_sf(xlim = c(-50, -70), ylim = c(-40, -65), expand = FALSE) +
-  geom_rect(aes(xmin = -65, xmax = -68, ymin = -45, ymax = -47), color = "red", fill = NA) +
+  geom_rect(aes(xmin = -65, xmax = -68, ymin = -45, ymax = -47), color = "red", fill = NA) +  # GSJ
   theme(panel.background = element_rect(fill="aliceblue"))
 
 ```
@@ -49,13 +49,19 @@ Los efectos de los cambios ambientales antropogénicos en los ecosistemas del At
 
 ### SITUACIÓN EN EL GOLFO SAN JORGE
 
-La región más boreal del gradiente es el Golfo San Jorge (GSJ), entre latitudes 45º a 47º S y longitudes 65º a 68º O. El conocimiento de este ecosistema ha crecido en los últimos años gracias a los diversos estudios surgidos del Grupo de Trabajo Golfo San Jorge [@Dans2021]. El GSJ es un área particularmente productiva del Mar Argentino. Consiste en una cuenca semicerrada de aproximadamente 230 km de apertura latitudinal y con aproximadamente 150 km de ancho longitudinal. Dada la importante productividad primaria, varias especies de mamíferos marinos, aves marinas, peces y crustáceos se solapan, formando agregaciones reproductivas, de cría y de alimentación [@Yorio2009]. El GSJ sustentó dos importantes pesquerías de arrastre de fondo: la pesquería del langostino patagónico Pleoticus muelleri y la de la merluza común, Merluccius hubbsi [@Gongora2012]. Por la importancia de las poblaciones del sistema, se han creado áreas protegidas y/o de manejo pesquero con distintas restricciones [@Gongora2012].
+La región más boreal del gradiente es el Golfo San Jorge (GSJ), entre latitudes 45º a 47º S y longitudes 65º a 68º O. El conocimiento de este ecosistema ha crecido en los últimos años gracias a los diversos estudios surgidos del Grupo de Trabajo Golfo San Jorge [@Dans2021]. El GSJ es un área particularmente productiva del Mar Argentino. Consiste en una cuenca semicerrada de aproximadamente 230 km de apertura latitudinal y con aproximadamente 150 km de ancho longitudinal. Dada la importante productividad primaria, varias especies de mamíferos marinos, aves marinas, peces y crustáceos se solapan, formando agregaciones reproductivas, de cría y de alimentación [@Yorio2009]. Por la importancia de las poblaciones del sistema, se han creado áreas protegidas y/o de manejo pesquero con distintas restricciones [@Gongora2012]. El GSJ es un área clave de alimentación, reproducción y cría para las principales pesquerías de Argentina, sustentando principalmente dos pesquerías de arrastre de fondo: la pesquería del langostino patagónico *Pleoticus muelleri* y la de la merluza común, *Merluccius hubbsi* [@Gongora2012; @Lovrich2014]. Estas pesquerías se han desarrollado por más de 30 años, y varias especies han mostrado alteraciones en sus dietas, como por ejemplo especies carroñeras incorporando ítems del descarte pesquero.
 
-La primera descripción y de alta resolución taxonómica de las interacciones tróficas del GSJ ha sido publicada recientemente, y caracteriza la red trófica de dicho ecosistema con más de 160 especies y casi 1000 interacciones presa-depredador [@Funes2020].
+La primera descripción y de alta resolución taxonómica de las interacciones tróficas del GSJ ha sido publicada recientemente, y caracteriza la red trófica de dicho ecosistema con más de 160 especies y casi 1000 interacciones presa-depredador [@Funes2020]. Las especies que se destacan como importantes en la estructura de la red y aumentan la eficiencia energética del ecosistema conectando los niveles tróficos basales (productores primarios) y tope (depredadores) son los crustáceos *Pleoticus muelleri* y *Munida gregaria*, de posiciones tróficas intermedias. La inclusión del efecto de la pesca sugiere cambios esenciales en las interacciones entre las especies, donde la merluza común adquiere relevancia como especie clave. Además, el efecto de la pesca genera cambios en la estructura y funcionamiento del ecosistema: mayor proporción de especies omnívoras, disminución en el nivel trófico medio y menor estabilidad del sistema [@Funes2022].
 
-
+En este contexto, algunos de los principales interrogantes abiertos para el GSJ radican en estudiar de qué manera los cambios registrados en la estructura y funcionamiento de la red trófica afectan el flujo de energía en el sistema. Asimismo, evaluar los posibles cambios de régimen como consecuencia de recientes alteraciones en la distribución en la comunidad de peces [@Galvan2022].
 
 ### SITUACIÓN EN EL AMP NAMUNCURÁ - BANCO BURDWOOD
+
+El Área Marina Protegida (AMP) Namuncurá - Banco Burdwood, centrada en 54º S y 59º O, es la primera área oceánica protegida dentro de la Zona Económica Exclusiva de Argentina creada en el año 2013 mediante la promulgación de la Ley 26.785. Es reconocida como un área subantártica de importancia ecológica [@Schejter2016]. El conocimiento sobre la estructura trófica y la dinámica de las comunidades bentónicas y pelágicas del ecosistema del AMP está siendo estudiado mediante diferentes enfoques por el Grupo de Trabajo Banco Burdwood. Entre la fauna bentónica se han reportado especies de alta vulnerabilidad: briozoos, poríferos y tunicados [@Falabella2017] y en sus taludes corales de aguas frías. Estos grupos son importantes indicadores del estado del ecosistema debido a que son formadores de estructuras, a su sensibilidad a la pesca de arrastre de fondo y a los muy lentos tiempos de recuperación luego de un evento de perturbación [@Falabella2017].
+
+Las investigaciones en el AMP han hecho foco en etapas y especies claves del ecosistema [@GarciaAlonso2018; @Schejter2020] y a nivel de la red trófica a escala local como regional [@Riccialdelli2020].
+SEGUIR CON WASP-WAIST...
+
 
 ### SITUACIÓN EN EL CANAL BEAGLE
 
