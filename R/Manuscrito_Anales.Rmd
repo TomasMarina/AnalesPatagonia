@@ -1,18 +1,18 @@
 ---
-title: "Una revisión de los efectos de los cambios ambientales antropogénicos en las interacciones tróficas de los ecosistemas marinos en el gradiente latitudinal Atlántico Sudoccidental - Antártida: una aproximación mediante redes ecológicas"
+title: "Una revisión de los efectos de los cambios ambientales antropogénicos en las interacciones tróficas de ecosistemas marinos del gradiente latitudinal Atlántico Sudoccidental - Antártida"
 author: "Tomás I. Marina & Leonardo A. Saravia"
-output: word_document
-bibliography: "MS_Anales.bib"
+output:
+  word_document
+bibliography: MS_Anales.bib
 ---
 
 ```{r setup, include=FALSE} 
 knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
 ```
 
+## Resumen
 
-## RESUMEN
-
-## INTRODUCCIÓN
+## Introducción
 
 Las redes ecológicas están compuestas por un conjunto de especies y/o grupos funcionales y conexiones que representan las interacciones y los flujos de energía y/o materia en un sistema. Particularmente, una red ecológica describe las interacciones entre especies en una comunidad y hábitat determinados. En los ecosistemas ocurren interacciones de diferentes tipos: tróficas (de alimentación), mutualistas (de provisión de alimento y refugio), competitivas (de interferencia en la utilización de los recursos comunes), entre otras. Esta aproximación al estudio de las comunidades como una red de múltiples interacciones es una herramienta de análisis que ayuda a revelar no sólo la estructura y estabilidad sino las propiedades dinámicas y energéticas de un ecosistema [@Belgrano2005]. Los modelos tróficos de redes complejas pueden ser útiles para evitar el reduccionismo de analizar solo las especies que se suponen importantes y/o con las interacciones de mayor flujo relativo, lo que trae como consecuencia una descripción sesgada e incompleta del sistema en estudio. Al incorporar la mayor parte de las interacciones es posible capturar fenómenos emergentes imposibles de predecir cuando se utilizan modelos de pocas especies [@Hagstrom2017]. Esto proporciona una perspectiva de sistemas complejos para investigar los fenómenos ecológicos y para analizar los efectos del cambio climático global y las perturbaciones antropogénicas en los ecosistemas marinos [@Pascual2005].
 
@@ -34,42 +34,51 @@ library(rnaturalearth)
 library(rnaturalearthdata)
 
 world <- ne_countries(scale = "medium", returnclass = "sf")
+mypoint <- data.frame(long=c(-79.743, -79.696, -79.645, -79.595),
+                      lat=c(9.160, 9.117, 9.058, 9.015),
+                      group=c("GSJ", "AMPN-BB", "Beagle", "Potter"))
 ggplot(data = world) +
   geom_sf() +
   coord_sf(xlim = c(-50, -70), ylim = c(-40, -65), expand = FALSE) +
   geom_rect(aes(xmin = -65, xmax = -68, ymin = -45, ymax = -47), color = "red", fill = NA) +  # GSJ
+  geom_rect(aes(xmin = -56, xmax = -62, ymin = -54, ymax = -55), color = "red", fill = NA) +  # AMP
+  geom_rect(aes(xmin = -68.5, xmax = -66, ymin = -54.75, ymax = -55), color = "red", fill = NA) +  # Beagle
+  geom_rect(aes(xmin = -58, xmax = -58.1, ymin = -62, ymax = -62.1), color = "red", fill = NA) +  # Potter
+  #geom_label() +
   theme(panel.background = element_rect(fill="aliceblue"))
 
 ```
 
 
-## CAMBIOS AMBIENTALES ANTROPOGÉNICOS EN EL ATLÁNTICO SUDOCCIDENTAL Y LA PENÍNSULA ANTÁRTICA
+## Cambios ambientales antropogénicos en el Atlántico Sudoccidental y la Península Antártica
 
 Los efectos de los cambios ambientales antropogénicos en los ecosistemas del Atlántico Sudoccidental, particularmente del Mar Argentino, y la Península Antártica han sido estudiados principalmente con foco en una única especie o en un grupo reducido de especies de interés [e.g. @Sahade2015; @Almandoz2019; @Dans2021; @Fioramonti2022]. Además, el análisis de estos efectos sobre las interacciones tróficas se acotan a ciertas relaciones presa-depredador de interés, e investigaciones que consideren la totalidad de la red compleja de interacciones tróficas no existen para algunos ecosistemas del Atlántico Sudoccidental y la Península Antártica. A continuación se describe el estado de conocimiento sobre estos temas en los diferentes ecosistemas marinos que comprenden el gradiente latitudinal.
 
-### SITUACIÓN EN EL GOLFO SAN JORGE
+### Situación en el Golfo San Jorge
 
 La región más boreal del gradiente es el Golfo San Jorge (GSJ), entre latitudes 45º a 47º S y longitudes 65º a 68º O. El conocimiento de este ecosistema ha crecido en los últimos años gracias a los diversos estudios surgidos del Grupo de Trabajo Golfo San Jorge [@Dans2021]. El GSJ es un área particularmente productiva del Mar Argentino. Consiste en una cuenca semicerrada de aproximadamente 230 km de apertura latitudinal y con aproximadamente 150 km de ancho longitudinal. Dada la importante productividad primaria, varias especies de mamíferos marinos, aves marinas, peces y crustáceos se solapan, formando agregaciones reproductivas, de cría y de alimentación [@Yorio2009]. Por la importancia de las poblaciones del sistema, se han creado áreas protegidas y/o de manejo pesquero con distintas restricciones [@Gongora2012]. El GSJ es un área clave de alimentación, reproducción y cría para las principales pesquerías de Argentina, sustentando principalmente dos pesquerías de arrastre de fondo: la pesquería del langostino patagónico *Pleoticus muelleri* y la de la merluza común, *Merluccius hubbsi* [@Gongora2012; @Lovrich2014]. Estas pesquerías se han desarrollado por más de 30 años, y varias especies han mostrado alteraciones en sus dietas, como por ejemplo especies carroñeras incorporando ítems del descarte pesquero.
 
 La primera descripción y de alta resolución taxonómica de las interacciones tróficas del GSJ ha sido publicada recientemente, y caracteriza la red trófica de dicho ecosistema con más de 160 especies y casi 1000 interacciones presa-depredador [@Funes2020]. Las especies que se destacan como importantes en la estructura de la red y aumentan la eficiencia energética del ecosistema conectando los niveles tróficos basales (productores primarios) y tope (depredadores) son los crustáceos *Pleoticus muelleri* y *Munida gregaria*, de posiciones tróficas intermedias. La inclusión del efecto de la pesca sugiere cambios esenciales en las interacciones entre las especies, donde la merluza común adquiere relevancia como especie clave. Además, el efecto de la pesca genera cambios en la estructura y funcionamiento del ecosistema: mayor proporción de especies omnívoras, disminución en el nivel trófico medio y menor estabilidad del sistema [@Funes2022].
 
-### SITUACIÓN EN EL AMP NAMUNCURÁ - BANCO BURDWOOD
+### Situación en el AMP Namuncurá - Banco Burdwood
 
 El Área Marina Protegida (AMP) Namuncurá - Banco Burdwood, centrada en 54º S y 59º O, es la primera área oceánica protegida dentro de la Zona Económica Exclusiva de Argentina creada en el año 2013 mediante la promulgación de la Ley 26.785. Es reconocida como un área subantártica de importancia ecológica [@Schejter2016]. El conocimiento sobre la estructura trófica y la dinámica de las comunidades bentónicas y pelágicas del ecosistema del AMP está siendo estudiado mediante diferentes enfoques por el Grupo de Trabajo Banco Burdwood. Entre la fauna bentónica se han reportado especies de alta vulnerabilidad: briozoos, poríferos y tunicados [@Falabella2017] y en sus taludes corales de aguas frías. Estos grupos son importantes indicadores del estado del ecosistema debido a que son formadores de estructuras, a su sensibilidad a la pesca de arrastre de fondo y a los muy lentos tiempos de recuperación luego de un evento de perturbación [@Falabella2017].
 
 Las investigaciones en el AMP han hecho foco en etapas y especies claves del ecosistema [@GarciaAlonso2018; @Schejter2020] y a nivel de la red trófica a escala local como regional [@Riccialdelli2020]. Recientemente se ha propuesto que el ecosistema está regulado por especies de nivel trófico intermedio que ejercen un control de tipo wasp-waist (o cintura de avispa) [@Padovani2012; @Arkhipkin2013; @Riccialdelli2020]. Una de estas especies es la sardina fueguina *Sprattus fuegensis*. De un modo similar, el pez bento-pelágico *Patagonotothen ramsayi*, constituye la segunda especie considerada wasp-waist, de gran abundancia regionalmente y en el sector, y dado su comportamiento bento-pelágico puede funcionar como un enlace importante entre las redes pelágicas y bentónicas [@Arkhipkin2013; @Riccialdelli2020]. Análisis preliminares muestran que la red trófica del AMP está compuesta por de 387 especies tróficas, es decir que existen nodos de la red definidos a diferentes resoluciones taxonómicas, y más de 1300 interacciones [@Marina2021]. En términos de cantidad de interacciones se destacan los peces bento-pelágicos *Dissostichus eleginoides* y *Patagonotothen guntheri* y el anfípodo *Themisto gaudichaudii*.
 
-### SITUACIÓN EN EL CANAL BEAGLE
+### Situación en el Canal Beagle
 
-El Canal Beagle es un ecosistema marino subpolar único que conecta los océanos Pacífico y Atlántico [] (Isla et al. 1999; Gordillo et al. 2008). Está amenazado por actividades antropogénicas como la introducción de especies exóticas (e.g., invasión del salmón chinook: Ferna ́ndez et al. 2010; Riva-Rosi et al. 2012), niveles crecientes de contaminación en las zonas urbanas costeras. (e.g., descargas de aguas residuales: Gill et al. 2011; Biancalana y Torres 2011), e incluso la pesca artesanal de especies económicamente importantes (e.g., centollas: Lovrich 1997). Las consecuencias ecológicas de estas amenazas son poco conocidas, pero la reciente invasión del salmón chinook (Fernández et al. 2010) podría constituir una gran amenaza para la biodiversidad y la estructura del ecosistema en los ecosistemas marinos costeros del Canal Beagle.
+El Canal Beagle es un ecosistema marino subpolar único que conecta los océanos Pacífico y Atlántico. Está amenazado por actividades antropogénicas como la introducción de especies exóticas (e.g., invasión del salmón chinook: @Fernandez2010, @RivaRossi2012), niveles crecientes de contaminación en las zonas urbanas costeras. (e.g., descargas de aguas residuales: @Gil2011, @Biancalana2011), e incluso la pesca artesanal de especies económicamente importantes (e.g., centollas: @Lovrich1997). Las consecuencias ecológicas de estas amenazas son poco conocidas, pero la reciente invasión del salmón chinook [@Fernandez2010] podría constituir una gran amenaza para la biodiversidad y la estructura del ecosistema en los ecosistemas marinos costeros del Canal Beagle.
 
 La primera aproximación de la complejidad de las relaciones presa-depredador en el Canal fue realizada por @Riccialdelli2017. Los autores sugieren al menos cuatro fuentes principales de energía para el ecosistema: fitoplancton pelágico, algas bentónicas y detritos marinos y terrestres. También identificaron cuatro niveles tróficos en la red trófica y mostraron que los consumidores que ocupan niveles tróficos similares dependen de diferentes fuentes de producción. Recientemente, @Rodriguez2022 construyó y analizó, mediante la aproximación de redes complejas, la red trófica del Canal Beagle. Aquí mostraron que la red se compone de 145 especies y más de 1100 interacciones, donde las especies de niveles tróficos intermedios son las dominantes. Particularmente, *Munida gregaria* surge como una especie importante para el mantenimiento de la conectividad de la red. En comparación con una red trófica antártica (Caleta Potter), el Canal mostró un mayor número de especies tróficas (principalmente debido a una mayor riqueza de peces), casi el doble de interacciones, mayor nivel trófico medio y mayor porcentaje de especies omnívoras. Además, los análisis de estabilidad sugieren valores menores y alta sensibilidad a la pérdida de especies muy conectadas y especies generalistas. Sin embargo, el alto grado de omnivoría y modularidad (formación de subgrupos de especies) sugieren plasticidad para adaptarse a los cambios antes de colapsar.
 
-### SITUACIÓN EN CALETA POTTER (ANTÁRTIDA)
+### Situación en Caleta Potter (Antártida)
 
+Caleta Potter es un fiordo antártico de 4 km de largo y 2,5 km de ancho, localizado en la Isla 25 de Mayo (62º S, 58º O). Una región somera (< 30 m) separa el fiordo en zonas interna y externa. La caleta interna, de menor profundidad, está caracterizada por fondos blandos, mientras que la caleta externa (100 m) se compone de fondos rocosos. Las costas rocosas de la Caleta están colonizadas por altas biomasas de macroalgas [Quartino et al., 2005], mientras que la caleta interna está densamente habitada por especies bentónicas filtradoras [Tatián et al., 2004]. Esta conjunción de hábitats hace de este fiordo un ecosistema de alta biodiversidad.
 
+En los últimos años se han llevado a cabo diversas investigaciones que caracterizan la complejidad, estructura y funcionamiento de la red trófica en este ecosistema antártico [@Cordone2018; @Marina2018; @Cordone2020; @Rodriguez2022]. La misma se compone de más de 100 especies tróficas y 600 interacciones. Las especies que dominan en número de interacciones pertenecen a niveles tróficos intermedios, siendo la más representativa *Notothenia coriiceps*, un pez demersal. Particularmente el estudio de @Cordone2018 sugiere que la red trófica de Caleta Potter es robusta a los cambios en las especies de macroalgas hasta un alto umbral de estrés, a partir del cual se espera que los efectos negativos se propaguen al resto de las especies de la red provocando su colapso. En comparación con la red trófica del Canal Beagle, descrita en la sección anterior, @Rodriguez2022 sugirió que la red de Caleta Potter es menos compleja pero más estable en el sentido de que su probabilidad de recuperación luego de una perturbación (ambiental o antropogénica) es mayor.
 
-## PERSPECTIVAS A FUTURO
+## Perspectivas a futuro
 
 En conclusión, los ecosistemas marinos que comprenden el gradiente latitudinal Atlántico Sudoccidental - Antártida se caracterizan por redes tróficas complejas en términos de la cantidad de especies e interacciones presa-depredador. En todos los casos el principal interrogante aún abierto es cómo se verá afectada la estructura, el funcionamiento y la estabilidad de la red frente a efectos de cambios ambientales antropogénicos que están ocurriendo actualmente en las diferentes áreas.
 
@@ -84,8 +93,8 @@ En las últimas décadas se ha puesto énfasis en el rol que cumple la intensida
 Con el advenimiento de ecosistemas marinos sometidos a múltiples perturbaciones simultáneamente (aumento de temperatura, pesquerías) [@Dans2021; @Gutt2021], es posible que se desencadenen cambios de régimen o de estructura en el entramado de múltiples interacciones tróficas. Un cambio de régimen en un ecosistema puede definirse como la ocurrencia de cambios relativamente abruptos entre estados persistentes que pueden presentarse en un sistema complejo [@deYoung2008]. Generalmente estos cambios se producen a nivel local pero pueden propagarse espacialmente hasta comprender regiones extensas [@Eklof2020]. La conexión entre los cambios de régimen entre diferentes áreas puede darse debido a la dispersión de especies. Si los organismos se dispersan entre áreas locales, el cambio debería comenzar en las áreas donde los sistemas están más cerca de los umbrales de transición, propagándose gradualmente hacia otras áreas como un efecto dominó [@Leemput2015]. La mayor interconexión entre cambios de régimen fue encontrada en ecosistemas marinos en estudios que involucran comunidades de macroalgas, fenómenos de eutroficación o el colapso de pesquerías [@Rocha2018]. Dada la conectividad entre las áreas del gradiente latitudinal [@Franco2018; @Matano2019], es de sumo interés realizar un análisis regional sobre la posible presencia de cambios de régimen locales y su conexión a nivel regional.
 
 
-## AGRADECIMIENTOS
+## Agradecimientos
 
 Agradecemos el esfuerzo y dedicación de las personas que han llevado adelante las investigaciones que nos han permitido realizar esta revisión. TIM y LAS agradecen el subsidio otorgado recientemente por el Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET, Argentina) para desarrollar el Proyecto de Investigación Plurianual "¿Cuáles son los efectos de los cambios ambientales antropogénicos en las interacciones tróficas de las comunidades de los ecosistemas marinos en el gradiente latitudinal Atlántico Sudoccidental - Antártida?" (cód. 11220210100907CO). Esto nos permitirá generar nuevo conocimiento sobre los efectos de los cambios ambientales antropogénicos en las redes tróficas de diferentes ecosistemas marinos del Atlántico Sudoccidental y la Península Antártica.
 
-## LITERATURA CITADA
+## Literatura citada
