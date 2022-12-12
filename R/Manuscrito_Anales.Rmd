@@ -82,27 +82,26 @@ La primera aproximación de la complejidad de las relaciones presa-depredador en
 
 ### Situación en Caleta Potter (Antártida)
 
-Caleta Potter es un fiordo antártico de 4 km de largo y 2,5 km de ancho, localizado en la Isla 25 de Mayo (62º S, 58º O). Una región somera (< 30 m) separa el fiordo en zonas interna y externa. La caleta interna, de menor profundidad, está caracterizada por fondos blandos, mientras que la caleta externa (100 m) se compone de fondos rocosos. Las costas rocosas de la Caleta están colonizadas por altas biomasas de macroalgas [Quartino et al., 2005], mientras que la caleta interna está densamente habitada por especies bentónicas filtradoras [Tatián et al., 2004]. Esta conjunción de hábitats hace de este fiordo un ecosistema de alta biodiversidad.
+Caleta Potter es un fiordo antártico de 4 km de largo y 2,5 km de ancho, localizado en la Isla 25 de Mayo (62º S, 58º O). Una región somera (< 30 m) separa el fiordo en zonas interna y externa. La caleta interna, de menor profundidad, está caracterizada por fondos blandos, mientras que la caleta externa (100 m) se compone de fondos rocosos. Las costas rocosas de la Caleta están colonizadas por altas biomasas de macroalgas [@Quartino2005], mientras que la caleta interna está densamente habitada por especies bentónicas filtradoras [@Tatian2004]. Esta conjunción de hábitats hace de este fiordo un ecosistema de alta biodiversidad.
 
 En los últimos años se han llevado a cabo diversas investigaciones que caracterizan la complejidad, estructura y funcionamiento de la red trófica en este ecosistema antártico [@Cordone2018; @Marina2018; @Cordone2020; @Rodriguez2022]. La misma se compone de más de 100 especies tróficas y 600 interacciones. Las especies que dominan en número de interacciones pertenecen a niveles tróficos intermedios, siendo la más representativa *Notothenia coriiceps*, un pez demersal. Particularmente el estudio de @Cordone2018 sugiere que la red trófica de Caleta Potter es robusta a los cambios en las especies de macroalgas hasta un alto umbral de estrés, a partir del cual se espera que los efectos negativos se propaguen al resto de las especies de la red provocando su colapso. En comparación con la red trófica del Canal Beagle, descrita en la sección anterior, @Rodriguez2022 sugirió que la red de Caleta Potter es menos compleja pero más estable en el sentido de que su probabilidad de recuperación luego de una perturbación (ambiental o antropogénica) es mayor.
 
-La tabla 1 resume el estado de situación para cada una de los ecosistemas marinos descritos anteriormente.
+La tabla 1 resume el estado de conocimiento trófico y las perturbaciones ambientales antropogénicas para cada una de los ecosistemas marinos descritos anteriormente.
 
 ```{r tabla1, tidy=FALSE, echo=FALSE, results='asis'}
 
 library(tidyverse)
 data1 <- tribble(
-  ~"Ecosistema",       ~"Latitud/Longitud",   ~"Conocimiento", ~"Cambios", ~"Referencias",
-  "Golfo San Jorge",   "45º-47º S / 65º-68º O", "", "", "",
-  "AMPN-BB",           "54º S / 59º O", "", "", "",
-  "Canal Beagle",      "54º S / 68º O", "", "", "",
-  "Caleta Potter",     "62º S / 58º O", "", "", "",
+  ~"Ecosistema",       ~"Latitud/Longitud",   ~"Conocimiento trófico", ~"Perturbaciones", ~"Referencias",
+  "Golfo San Jorge",   "45º-47º S / 65º-68º O", "Complejidad, estructura de red trófica; efecto de pesquerías sobre estabilidad", "Pesquerías", "Dans et al. 2021; Funes et al. 2022",
+  "AMPN-BB",           "54º S / 59º O", "Interacciones tróficas aisladas; especies clave; red trófica preliminar", "Microplásticos; Mercurio", "Schejter et al. 2020; Riccialdelli et al. 2020",
+  "Canal Beagle",      "54º S / 68º O", "Complejidad, estructura y estabilidad de red trófica; especies clave", "Microplásticos; eutrofización", "Riccialdelli et al. 2020; Rodríguez et al. 2022",
+  "Caleta Potter",     "62º S / 58º O", "Complejidad, estructura y funcionamiento de red trófica; efecto de extinciones (simuladas) sobre estabilidad", "Aumento de temperatura; partículas en suspensión", "Sahade et al. 2015; Marina et al. 2018; Cordone et al. 2018; Rodríguez et al. 2022",
 )
 knitr::kable((data1), booktabs = TRUE,
-caption = 'Tabla 1. Resumen del estado de conocimiento de las interacciones tróficas en los ecosistemas marinos del gradiente latitudinal Atlántico Sudoccidental - Antártida.')
+caption = 'Tabla 1. Resumen del estado de conocimiento de las interacciones tróficas y las principales perturbaciones ambientales antropogénicas en los ecosistemas marinos del gradiente latitudinal Atlántico Sudoccidental - Antártida.')
 
 ```
-
 
 ## Perspectivas a futuro
 
