@@ -4,8 +4,8 @@ title: "Una revisión de los efectos de los cambios ambientales antropogénicos 
   Sudoccidental - Antártida"
 author: "Tomás I. Marina & Leonardo A. Saravia"
 output:
-  pdf_document: default
   word_document: default
+  pdf_document: default
 bibliography: MS_Anales.bib
 ---
 
@@ -29,7 +29,7 @@ Uno de los cambios ambientales más importantes en los ecosistemas marinos de al
 
 El presente trabajo de revisión tiene como objetivo general evidenciar el estado de conocimiento de los efectos de los cambios ambientales antropogénicos sobre las interacciones tróficas de los ecosistemas marinos en un gradiente latitudinal Atlántico Sudoccidental - Antártida (45º S - 62º S), que abarca las siguientes áreas: Golfo San Jorge, Área Marina Protegida Namuncurá - Banco Burdwood, Canal Beagle y Caleta Potter (Antártida) (Fig. 1).
 
-```{r echo=FALSE, fig.align='center', fig.cap="Figura 1. Mapa que muestra las áreas que comprenden el gradiente latitudinal Atlántico Sudoccidental - Antártida."}
+```{r echo=FALSE, fig.align='center', fig.cap="Figura 1. Mapa que muestra las áreas que comprenden el gradiente latitudinal Atlántico Sudoccidental - Antártida. A: Golfo San Jorge, B: AMP Namuncurá - Banco Burdwood, C: Canal Beagle, D: Caleta Potter (Antártida)."}
 
 library(ggplot2)
 library(sf)
@@ -44,11 +44,16 @@ ggplot(data = world) +
   geom_sf() +
   coord_sf(xlim = c(-50, -70), ylim = c(-40, -65), expand = FALSE) +
   geom_rect(aes(xmin = -65, xmax = -68, ymin = -45, ymax = -47), color = "red", fill = NA) +  # GSJ
+  geom_text(aes(x = -68, y = -47, label="A"), nudge_x = 0.5, nudge_y = -0.5) +
   geom_rect(aes(xmin = -56, xmax = -62, ymin = -54, ymax = -55), color = "red", fill = NA) +  # AMP
+  geom_text(aes(x = -62, y = -55, label="B"), nudge_x = 0.5, nudge_y = -0.5) +
   geom_rect(aes(xmin = -68.5, xmax = -66, ymin = -54.75, ymax = -55), color = "red", fill = NA) +  # Beagle
+  geom_text(aes(x = -66, y = -55, label="C"), nudge_x = 0.5, nudge_y = -0.5) +
   geom_rect(aes(xmin = -58, xmax = -58.1, ymin = -62, ymax = -62.1), color = "red", fill = NA) +  # Potter
-  #geom_label() +
-  theme(panel.background = element_rect(fill="aliceblue"))
+  geom_text(aes(x = -58.1, y = -62.1, label="D"), nudge_x = 0.5, nudge_y = -0.5) +
+  theme(panel.background = element_rect(fill="aliceblue"),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank())
 
 ```
 
@@ -80,6 +85,24 @@ La primera aproximación de la complejidad de las relaciones presa-depredador en
 Caleta Potter es un fiordo antártico de 4 km de largo y 2,5 km de ancho, localizado en la Isla 25 de Mayo (62º S, 58º O). Una región somera (< 30 m) separa el fiordo en zonas interna y externa. La caleta interna, de menor profundidad, está caracterizada por fondos blandos, mientras que la caleta externa (100 m) se compone de fondos rocosos. Las costas rocosas de la Caleta están colonizadas por altas biomasas de macroalgas [Quartino et al., 2005], mientras que la caleta interna está densamente habitada por especies bentónicas filtradoras [Tatián et al., 2004]. Esta conjunción de hábitats hace de este fiordo un ecosistema de alta biodiversidad.
 
 En los últimos años se han llevado a cabo diversas investigaciones que caracterizan la complejidad, estructura y funcionamiento de la red trófica en este ecosistema antártico [@Cordone2018; @Marina2018; @Cordone2020; @Rodriguez2022]. La misma se compone de más de 100 especies tróficas y 600 interacciones. Las especies que dominan en número de interacciones pertenecen a niveles tróficos intermedios, siendo la más representativa *Notothenia coriiceps*, un pez demersal. Particularmente el estudio de @Cordone2018 sugiere que la red trófica de Caleta Potter es robusta a los cambios en las especies de macroalgas hasta un alto umbral de estrés, a partir del cual se espera que los efectos negativos se propaguen al resto de las especies de la red provocando su colapso. En comparación con la red trófica del Canal Beagle, descrita en la sección anterior, @Rodriguez2022 sugirió que la red de Caleta Potter es menos compleja pero más estable en el sentido de que su probabilidad de recuperación luego de una perturbación (ambiental o antropogénica) es mayor.
+
+La tabla 1 resume el estado de situación para cada una de los ecosistemas marinos descritos anteriormente.
+
+```{r tabla1, tidy=FALSE, echo=FALSE, results='asis'}
+
+library(tidyverse)
+data1 <- tribble(
+  ~"Ecosistema",       ~"Latitud/Longitud",   ~"Conocimiento", ~"Cambios", ~"Referencias",
+  "Golfo San Jorge",   "45º-47º S / 65º-68º O", "", "", "",
+  "AMPN-BB",           "54º S / 59º O", "", "", "",
+  "Canal Beagle",      "54º S / 68º O", "", "", "",
+  "Caleta Potter",     "62º S / 58º O", "", "", "",
+)
+knitr::kable((data1), booktabs = TRUE,
+caption = 'Tabla 1. Resumen del estado de conocimiento de las interacciones tróficas en los ecosistemas marinos del gradiente latitudinal Atlántico Sudoccidental - Antártida.')
+
+```
+
 
 ## Perspectivas a futuro
 
